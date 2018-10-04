@@ -34,10 +34,10 @@ namespace ParrotDemo {
              tbOutput.Text = string.Format("{0} {1}\r\n", s.Flies(), s);
 
             IFlyable flyer = new SuperHero();
-            IFlyable nFly = new Jet();
+            IFlyable nFly = new Jet(2);
 
             IFlyable[] flyers = new IFlyable[6];
-            flyers[0] = new Jet();
+            flyers[0] = new Jet(5);
             flyers[1] = new SuperHero();
             flyers[2] = flyer;
             flyers[3] = flyers[2];
@@ -48,6 +48,23 @@ namespace ParrotDemo {
                 tbOutput.Text += string.Format("{0} {1}\r\n", f.Flies(), f);
 
             }
+
+            Jet ourJet = new Jet(2);
+            Person p = new SuperHero("Bat","Man");
+            String b = ourJet + p;
+
+            Person pt = new Villian() { FirstName = "Joker" };
+            String c = ourJet + pt;
+
+            Person ph = new SuperHero("Wonder", "Woman");
+            String d = ourJet + ph;
+
+            int a = 1 + 2;
+
+
+
+
+
 
 
 
